@@ -5,10 +5,7 @@
 import React from "react";
 import {
     NavigationMenu,
-    NavigationMenuContent,
-    NavigationMenuItem,
     NavigationMenuList,
-    NavigationMenuTrigger,
 } from "@/components/ui/navigation-menu";
 import { useIsMobile } from "@/components/hooks/use-mobile";
 import { ModeToggle } from "./mode-toggle";
@@ -38,7 +35,8 @@ const AppIcon = React.memo(() => {
             <path d="M19.967 17.484A4 4 0 0 1 18 18"></path>
         </svg>
     );
-})
+});
+AppIcon.displayName = 'AppIcon';
 
 const Navbar = () => {
     const isMobile = useIsMobile();
