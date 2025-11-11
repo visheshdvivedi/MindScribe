@@ -24,6 +24,7 @@ const SettingsIcon = React.memo(() => {
         </svg>
     );
 });
+SettingsIcon.displayName = "Settings Icon"
 
 type SettingsDropdownInputType = {
     label: string,
@@ -148,7 +149,7 @@ const SettingsPanel = () => {
     })
 
     // function to update settings
-    const updateSettings = (key: string, value: any) => {
+    const updateSettings = (key: string, value: number | string | boolean) => {
         setSettings({
             ...settings,
             [key]: value
