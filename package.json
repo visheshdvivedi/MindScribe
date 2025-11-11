@@ -3,6 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "prepare": "husky install",
+    "precommit": "pnpm lint && pnpm test",
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
@@ -37,6 +39,7 @@
     "babel-jest": "^30.2.0",
     "eslint": "^9",
     "eslint-config-next": "16.0.1",
+    "husky": "^9.1.7",
     "jest": "^30.2.0",
     "tailwindcss": "^4.1.17",
     "ts-jest": "^29.4.5",
