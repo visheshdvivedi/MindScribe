@@ -24,6 +24,7 @@ const FileUploadIcon = React.memo(() => {
         </svg>
     );
 });
+FileUploadIcon.displayName = "FileUploadIcon";
 
 type FileUploadPanelProps = {
     onSubmit: (file: File) => void
@@ -85,7 +86,7 @@ const FileUploadPanel = ({ onSubmit }: FileUploadPanelProps) => {
         setDragActive(false);
     }
 
-    const handleButtonClick = (e: React.MouseEvent<HTMLButtonElement>) => {
+    const handleButtonClick = () => {
         if (fileInputRef && fileInputRef.current) {
             fileInputRef.current.click();
         }
@@ -119,7 +120,7 @@ const FileUploadPanel = ({ onSubmit }: FileUploadPanelProps) => {
             <span className="text-xl font-bold">{file.name}</span>
             <span>{formatBytes(file.size)}</span>
             <div className="flex flex-row gap-3">
-                <button className="px-4 py-3 font-medium rounded-lg text-white bg-gradient-to-br from-purple-800 to-purple-600 hover:from-purple-700 hover:to-purple-500">Submit</button>
+                <button onClick={handleSubmit} className="px-4 py-3 font-medium rounded-lg text-white bg-gradient-to-br from-purple-800 to-purple-600 hover:from-purple-700 hover:to-purple-500">Submit</button>
                 <button onClick={handleCancelButtonClick} className="px-3 py-2 font-medium rounded-lg text-white bg-gradient-to-br from-red-800 to-red-600 hover:from-red-700 hover:to-red-500">Cancel</button>
             </div>
         </div>
