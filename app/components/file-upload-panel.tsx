@@ -30,7 +30,7 @@ type FileUploadPanelProps = {
     onSubmit: (file: File) => void
 }
 
-const FileUploadPanel = ({ onSubmit }: FileUploadPanelProps) => {
+const FileUploadPanel = () => {
 
     const [file, setFile] = React.useState<File | null>(null);
     const fileInputRef = React.useRef<HTMLInputElement>(null);
@@ -96,9 +96,7 @@ const FileUploadPanel = ({ onSubmit }: FileUploadPanelProps) => {
         setFile(null);
     }
 
-    const handleSubmit = () => {
-        if (file && onSubmit) onSubmit(file);
-    }
+    const handleSubmit = () => {}
 
     if (!file) {
         return (
