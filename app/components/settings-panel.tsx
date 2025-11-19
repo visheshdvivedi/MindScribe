@@ -170,7 +170,7 @@ const SettingsPanel = () => {
                 <h2 className="text-xl font-bold">Settings</h2>
             </div>
             <hr className="border-b-2" />
-            <div className="p-6 flex flex-col gap-5">
+            <div className="px-6 py-5 flex flex-col gap-5">
                 <SettingsDropdownInput value={settings.summary_type} setValue={(val: string) => updateSettings(summaryTypeName, val)} name={summaryTypeName} label={summaryTypeLabel} options={summaryTypeOptions} />
                 <SettingsDropdownInput value={settings.tone} name={toneName} setValue={(val: string) => updateSettings(toneName, val)} label={toneLabel} options={toneOptions} />
                 <SettingsDropdownInput value={settings.perspective} setValue={(val: string) => updateSettings(perspectiveName, val)} name={perspectiveName} label={perspectiveLabel} options={perspectiveOptions} />
